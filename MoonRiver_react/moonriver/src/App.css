@@ -1,0 +1,11 @@
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+ background-color: #fff;;
+}
+.category {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;  
+  text-decoration: none;
+}
