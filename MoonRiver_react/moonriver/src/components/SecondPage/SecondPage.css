@@ -1,0 +1,6 @@
+.secondPage {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;  
+    text-decoration: none;
+  }
