@@ -1,0 +1,14 @@
+.carouselProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 886px;
+  margin-top: 16px;
+  background-color: #272727;
+  overflow: hidden;
+  position: relative;
+}
+.carousel {
+  display: flex;
+}

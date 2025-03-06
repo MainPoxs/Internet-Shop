@@ -1,32 +1,36 @@
-
-  .ctg-MenWomen {
-    display: flex;
-    justify-content: center;
-    width: 710px;
-    height: 587px;  
-    background-color: rgba(39, 39, 39, 0.4);
-    opacity: 100%;
-    background-blend-mode: overlay;
-    text-decoration: none;
-  }
-  .ctg-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 433px;
-    height: 125px;
-    margin-top: 227px;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  .style-text__menWoman {
-    width: 433px;
-    height: 71px; 
-    font-weight: 400;
-    font-size: 64px;
-    letter-spacing: 0.03em;
-    opacity: 100%;
-    text-decoration: none;
-  }
+.ctg-MenWomen {
+  display: flex;
+  justify-content: center;
+  width: 710px;
+  height: 587px;
+  background-color: rgba(39, 39, 39, 0.5);
+  opacity: 100%;
+  background-blend-mode: overlay;
+  text-decoration: none;
+}
+.ctg-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 433px;
+  height: 125px;
+  margin-top: 227px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.style-text__menWoman {
+  width: 433px;
+  height: 71px;
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: 0.03em;
+  opacity: 100%;
+  text-decoration: none;
+}
+.hr {
+  border: 1px solid #ffff;
+  width: 130px;
+  height: 0;
+}

@@ -1,0 +1,6 @@
+.firstPage {
+  display: flex;
+  justify-content: space-between;
+  height: 1024px;
+  width: 1440px;
+}

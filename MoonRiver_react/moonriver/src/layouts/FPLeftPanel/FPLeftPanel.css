@@ -1,0 +1,13 @@
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+}
+.ring {
+  display: flex;
+  z-index: 100;
+  position: relative;
+  width: 322px;
+  height: 170px;
+  left: 731px;
+  top: -450px;
+}

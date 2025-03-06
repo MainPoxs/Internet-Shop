@@ -2,7 +2,7 @@ import "./Header.css";
 
 function Header({ children }) {
   return (
-    <div class="Header">
+    <div class="header">
       {children}
       <img
         class="header__logo"
