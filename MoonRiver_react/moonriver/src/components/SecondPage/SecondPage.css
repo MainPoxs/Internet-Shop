@@ -1,6 +1,7 @@
 .secondPage {
-    width: 1440px;
-    display: flex;
-    justify-content: space-between;  
-    text-decoration: none;
-  }
+  width: 1440px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}

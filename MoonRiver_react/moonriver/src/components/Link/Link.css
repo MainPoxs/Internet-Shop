@@ -1,0 +1,30 @@
+.link-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 200px;
+}
+.linkProducts-h1 {
+  margin-left: 162px;
+  margin-top: 326px;
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: 0.03em;
+  color: #272727;
+}
+.link {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  color: #272727;
+}
+hr {
+  border: 1px solid #272727;
+  width: 130px;
+  height: 0;
+}
