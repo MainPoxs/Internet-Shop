@@ -1,0 +1,276 @@
+#menu {
+  z-index: 120;
+  position: relative;
+  top: -120px;
+  left: -878px;
+}
+button {
+  padding: 0;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+header {
+  display: flex;
+  width: 1440px;
+  height: 113px;
+}
+.header_logo {
+  display: flex;
+  align-items: flex-end;
+  width: 878px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 258px;
+  height: 53px;
+  margin-left: 162px;
+}
+.navMenu {
+  margin: 0;
+  padding: 0;
+}
+.navMenu nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 75px;
+  background-color: #2f2f2f;
+}
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
+  height: 21px;
+  margin-left: 163px;
+  list-style: none;
+}
+.header_menu {
+  display: flex;
+  align-items: flex-end;
+  width: 562px;
+  background-color: #272727;
+}
+.open-menu {
+  display: flex;
+  width: 260px;
+  height: 53px;
+}
+
+details > summary,
+details[open] summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 16px;
+  padding-left: 100px;
+  cursor: pointer;
+  list-style: none;
+}
+details[open] summary {
+  padding-top: 30px;
+  padding-left: 60px;
+  height: 30px;
+}
+
+details[open] .lineCenter {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+details[open] .lineBottom {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+details > summary:hover {
+  height: 25px;
+}
+
+details[open] .navMenu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+  width: 1440px;
+  height: 1140px;
+  background-color: #272727;
+  animation-name: menuAnimation;
+  animation-duration: 2s;
+}
+details[open] .navMenuHeader {
+  display: flex;
+  align-items: center;
+  height: 133px;
+}
+details[open] .navLogo {
+  width: 258px;
+  height: 53px;
+  margin-left: 163px;
+  margin-right: 626px;
+}
+
+details[open] .navMenu nav {
+  width: 1440px;
+  height: 75px;
+  background-color: #2f2f2f;
+}
+details[open] .navlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
+  height: 75px;
+  margin-left: -30px;
+}
+.navlist li {
+  font-family: FuturaPtMedium;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+details[open] .navMenuArrow {
+  width: 31px;
+  height: 17px;
+  padding-left: 23px;
+}
+details[open] .navMenuArrow:hover {
+  padding-left: 30px;
+  transition-duration: 0.4s;
+}
+
+details[open] table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-left: 163px;
+}
+details[open] table a {
+  color: white;
+  text-decoration: none;
+}
+details[open] tbody {
+  display: flex;
+}
+details[open] tbody tr {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+details[open] tbody tr,
+.futuraBook18 {
+  font-family: FuturaPtBook;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+details[open] #tr1 {
+  width: 100px;
+}
+details[open] #tr2 {
+  width: 95px;
+}
+details[open] #tr3 {
+  width: 132px;
+}
+details[open] #tr4 {
+  width: 154px;
+}
+details[open] tr {
+  text-align: left;
+  padding-right: 100px;
+  cursor: pointer;
+}
+details[open] th {
+  vertical-align: top;
+  padding-right: 96px;
+  padding-bottom: 30px;
+  font-family: FuturaPtDemi;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+}
+details[open] li:hover {
+  border-bottom: 2px solid #efc58b;
+}
+details[open] tr a:hover {
+  border-bottom: 1px solid #efc58b;
+}
+details[open] li {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+details[open] hr:hover {
+  border: 2px solid #ffffff;
+}
+details[open] td {
+  vertical-align: top;
+  padding-bottom: 15px;
+}
+details[open] .tr4Font {
+  font-family: SegoeUIItalic;
+  font-size: 16px;
+  letter-spacing: 0em;
+  color: #efc58b;
+}
+details[open] .navMenuLine {
+  width: 1115px;
+  margin-top: 70px;
+  margin-left: 163px;
+  border-top: 2px solid #2f2f2f;
+}
+details[open] .navPhotoBlock {
+  display: flex;
+}
+details[open] .navPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: url("navPhoto.svg");
+  width: 749px;
+  height: 268px;
+  margin: 70px 85px 0 164px;
+  background-color: rgba(39, 39, 39, 0.5);
+  opacity: 100%;
+  background-blend-mode: overlay;
+  text-decoration: none;
+}
+details[open] .navPhoto div {
+  display: flex;
+  align-items: center;
+}
+details[open] .centerText {
+  justify-content: center;
+  height: 53px;
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.03em;
+  opacity: 100%;
+  color: #ffffff;
+}
+details[open] .navContacts {
+  display: flex;
+  height: 268px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+
+@keyframes menuAnimation {
+  from {
+    top: -1024px;
+  }
+  to {
+    top: 0;
+  }
+}

@@ -1,7 +1,14 @@
+.carousel-title {
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
 .carouselProducts {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 886px;
   margin-top: 16px;
@@ -11,4 +18,50 @@
 }
 .carousel {
   display: flex;
+  transition-duration: 1s;
+}
+.carousel-footer {
+  display: flex;
+}
+.arrow {
+  display: flex;
+  justify-content: space-between;
+}
+.arrow-next {
+  width: 60px;
+  height: 60px;
+  background-color: #272727;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  margin-right: 60px;
+  transform: rotate(-135deg);
+}
+.arrow-prev {
+  width: 60px;
+  height: 60px;
+  background-color: #272727;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  margin-right: 60px;
+  transform: rotate(45deg);
+}
+.arrow-next:hover,
+.arrow-prev:hover {
+  border-top: 10px solid rgb(90, 78, 78);
+  border-right: 10px solid rgb(90, 78, 78);
+}
+.instagram {
+  margin-right: 500px;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+}
+.instagram img {
+  background-color: white;
+  border-radius: 50%;
+}
+.instagram img:hover {
+  width: 30px;
+  height: 30px;
+  transition-duration: 1s;
 }
