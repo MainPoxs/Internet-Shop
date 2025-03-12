@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header/Header";
 import FirstPage from "./components/FirstPage/FirstPage";
 import SecondPage from "./components/SecondPage/SecondPage";
 import ProductCategory from "./components/ProductCategory/ProductCategory";
@@ -8,7 +7,7 @@ import CarouselProducts from "./components/CarouselProducts/CarouselProducts";
 import Link from "./components/Link/Link";
 import FPRightPanel from "./layouts/FPRightPanel/FPRightPanel";
 import FPLeftPanel from "./layouts/FPLeftPanel/FPLeftPanel";
-
+import Products from "./components/Products/Products";
 function App() {
   const data = [
     {
@@ -26,12 +25,22 @@ function App() {
     { photo: "./image/photo3.svg" },
     { photo: "./image/photo4.svg" },
     { photo: "./image/photo5.svg" },
+    { photo: "./image/photo1.svg" },
+    { photo: "./image/photo2.svg" },
+    { photo: "./image/photo3.svg" },
+    { photo: "./image/photo4.svg" },
+    { photo: "./image/photo5.svg" },
+    { photo: "./image/photo1.svg" },
+    { photo: "./image/photo2.svg" },
+    { photo: "./image/photo3.svg" },
+    { photo: "./image/photo4.svg" },
+    { photo: "./image/photo5.svg" },
   ];
+
   return (
     <div className="app">
       <FirstPage>
         <FPLeftPanel>
-          <Header />
           <LinkProducts>
             <Link />
           </LinkProducts>
@@ -53,6 +62,7 @@ function App() {
           <img src={item.photo} alt="картинка" />
         ))}
       </CarouselProducts>
+      <Products />
     </div>
   );
 }
