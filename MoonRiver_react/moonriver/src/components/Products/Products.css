@@ -1,3 +1,35 @@
-.s {
-  color: blue;
+.catalog-h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(43, 39, 39);
+}
+
+.catalog-item:hover img {
+  transform: scale(1.2);
+}
+.catalog-item_image {
+  position: relative;
+  overflow: hidden;
+}
+.imgJewelry {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  max-width: 100%;
+  transition: 0.3s;
+}
+.catalog-h2 {
+  color: black;
 }

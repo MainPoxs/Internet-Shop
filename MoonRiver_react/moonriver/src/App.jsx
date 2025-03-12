@@ -8,6 +8,8 @@ import Link from "./components/Link/Link";
 import FPRightPanel from "./layouts/FPRightPanel/FPRightPanel";
 import FPLeftPanel from "./layouts/FPLeftPanel/FPLeftPanel";
 import Products from "./components/Products/Products";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 function App() {
   const data = [
     {
