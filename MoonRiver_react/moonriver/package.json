@@ -13,9 +13,11 @@
     "@iminside/react-yandex-maps": "^1.2.7",
     "axios": "^1.8.2",
     "express": "^4.21.2",
+    "lorem-ipsum": "^2.0.8",
     "pg": "^8.13.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.3.0",
     "swiper": "^11.2.5"
   },
   "devDependencies": {

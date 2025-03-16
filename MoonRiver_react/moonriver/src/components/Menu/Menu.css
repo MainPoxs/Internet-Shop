@@ -1,3 +1,35 @@
+details {
+  display: flex;
+  width: 100%;
+}
+
+summary {
+  display: flex;
+  margin-left: 50px;
+  height: 20px;
+  cursor: pointer;
+}
+
+details > summary .lineStyle,
+details[open] summary .lineStyle {
+  border-top: 2px solid white;
+  z-index: 25;
+  transition-duration: 2s;
+}
+
+details > summary .lineCenter,
+details[open] summary .lineCenter {
+  width: 30px;
+  border-top: 2px solid white;
+  z-index: 25;
+}
+
+details > summary .lineBottom,
+details[open] summary .lineBottom {
+  width: 30px;
+  border-top: 2px solid white;
+  z-index: 25;
+}
 #menu {
   z-index: 120;
   position: relative;
@@ -32,12 +64,12 @@ header {
 .navMenu {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .navMenu nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
   height: 75px;
   background-color: #2f2f2f;
 }
@@ -62,21 +94,20 @@ header {
   height: 53px;
 }
 
-details > summary,
+/* details > summary,
 details[open] summary {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 16px;
+  height: 20px;
   padding-left: 100px;
   cursor: pointer;
   list-style: none;
-}
+} */
 details[open] summary {
-  padding-top: 30px;
-  padding-left: 60px;
-  height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 details[open] .lineCenter {
@@ -97,11 +128,11 @@ details[open] .navMenu {
   flex-direction: column;
   position: relative;
   z-index: 100;
-  width: 1440px;
-  height: 1140px;
+  height: 100%;
+  width: 100%;
   background-color: #272727;
   animation-name: menuAnimation;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 details[open] .navMenuHeader {
   display: flex;
@@ -116,7 +147,6 @@ details[open] .navLogo {
 }
 
 details[open] .navMenu nav {
-  width: 1440px;
   height: 75px;
   background-color: #2f2f2f;
 }
@@ -265,7 +295,17 @@ details[open] .navContacts {
   justify-content: space-around;
   margin-top: 70px;
 }
-
+/* details[open] > .navMenu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  background-color: #272727;
+  animation-name: menuAnimationClose;
+  animation-duration: 3s;
+} */
 @keyframes menuAnimation {
   from {
     top: -1024px;
@@ -274,3 +314,12 @@ details[open] .navContacts {
     top: 0;
   }
 }
+
+/* @keyframes menuAnimationClose {
+  from {
+    top: 1024px;
+  }
+  to {
+    top: -1024;
+  }
+} */

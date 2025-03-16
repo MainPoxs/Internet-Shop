@@ -2,10 +2,10 @@ import "./FPLeftPanel.css";
 
 function FPLeftPanel({ children }) {
   return (
-    <dev className="leftPanel">
+    <div className="leftPanel">
       {children}
-      <img className="ring" src="./image/ring.svg" />
-    </dev>
+      {/* <img className="ring" src="./image/ring.svg" /> */}
+    </div>
   );
 }
 
