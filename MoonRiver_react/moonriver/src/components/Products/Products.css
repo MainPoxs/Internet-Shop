@@ -1,35 +1,40 @@
-.catalog-h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
+.catalog-head {
+  height: 25px;
+  background-color: #252525;
 }
-.catalog {
+.catalog-head__link {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+}
+.catalog-product__link {
+  text-decoration: none;
+  color: #272727;
+}
+.catalog-jewelry {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
-.catalog-item {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: rgb(43, 39, 39);
-}
 
-.catalog-item:hover img {
-  transform: scale(1.2);
-}
 .catalog-item_image {
   position: relative;
   overflow: hidden;
 }
+
 .imgJewelry {
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
   object-position: center;
   max-width: 100%;
   transition: 0.3s;
 }
+.catalog-item_image:hover .imgJewelry {
+  transform: scale(1.2);
+}
+
 .catalog-h2 {
   color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
 }

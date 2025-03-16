@@ -2,14 +2,8 @@ import "./Menu.css";
 
 function Menu() {
   return (
-    <div class="navMenu ">
-      <div class="navMenuHeader ">
-        <img class="navLogo" src="./image/logoNavMenu.svg" alt="логотип"></img>
-        <summary class="closeSummary btnSummary">
-          <div class="lineCenter lineStyle"></div>
-          <div class="lineBottom lineStyle"></div>
-        </summary>
-      </div>
+    <div className="navMenu ">
+      <div class="navMenuHeader "></div>
       <nav>
         <ul class="navlist">
           <li>ЮВЕЛИРНЫЕ ИЗДЕЛИЯ</li>

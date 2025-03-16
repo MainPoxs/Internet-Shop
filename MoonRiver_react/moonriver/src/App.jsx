@@ -1,24 +1,41 @@
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  useParams,
+  Route,
+  Link,
+} from "react-router-dom";
 import FirstPage from "./components/FirstPage/FirstPage";
 import SecondPage from "./components/SecondPage/SecondPage";
 import ProductCategory from "./components/ProductCategory/ProductCategory";
 import LinkProducts from "./components/LinkProducts/LinkProducts";
 import CarouselProducts from "./components/CarouselProducts/CarouselProducts";
-import Link from "./components/Link/Link";
+import LinkCatalog from "./components/LinkCatalog/LinkCatalog";
 import FPRightPanel from "./layouts/FPRightPanel/FPRightPanel";
 import FPLeftPanel from "./layouts/FPLeftPanel/FPLeftPanel";
 import Products from "./components/Products/Products";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import Details from "./components/Details/Details";
+import FilterMen from "./components/FilterMen/FilterMen";
+import FilterWoman from "./components/FilterWoman/FilterWoman";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import Container from "./components/Container/Container";
+
+import Menu from "./components/Menu/Menu";
+import Button from "./components/Button/Button";
+
 function App() {
-  const data = [
+  const gender = [
     {
       nameCategory: "Для мужчин",
       photoBG: "./image/photoMen.svg",
+      path: "/filterMen",
     },
     {
       nameCategory: "Для женщин",
       photoBG: "./image/photoWoman.svg",
+      path: "/filterWoman",
     },
   ];
   const listProducts = [
@@ -41,30 +58,55 @@ function App() {
 
   return (
     <div className="app">
-      <FirstPage>
-        <FPLeftPanel>
-          <LinkProducts>
-            <Link />
-          </LinkProducts>
-        </FPLeftPanel>
-        <FPRightPanel />
-      </FirstPage>
-      <SecondPage>
-        {data.map((item, index) => (
-          <ProductCategory
-            key={index}
-            nameCategory={item.nameCategory}
-            photoBG={item.photoBG}
-            style={{ backgroundImage: `url(${item.photoBG})` }}
-          ></ProductCategory>
-        ))}
-      </SecondPage>
-      <CarouselProducts>
-        {listProducts.map((item) => (
-          <img src={item.photo} alt="картинка" />
-        ))}
-      </CarouselProducts>
-      <Products />
+      <div className="app-header">
+        <img className="logo" src="logoNavMenu.svg" alt="логотип" />
+      </div>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Container>
+                <details>
+                  <summary>
+                    <Button />
+                  </summary>
+                  <Menu />
+                </details>
+                <FirstPage>
+                  <FPLeftPanel>
+                    <LinkProducts>
+                      <LinkCatalog />
+                    </LinkProducts>
+                  </FPLeftPanel>
+                  <FPRightPanel></FPRightPanel>
+                </FirstPage>
+                <SecondPage>
+                  {gender.map((item, index) => (
+                    <ProductCategory
+                      key={index}
+                      nameCategory={item.nameCategory}
+                      photoBG={item.photoBG}
+                      style={{ backgroundImage: `url(${item.photoBG})` }}
+                      path={item.path}
+                    ></ProductCategory>
+                  ))}
+                </SecondPage>
+                <CarouselProducts>
+                  {listProducts.map((item) => (
+                    <img src={item.photo} alt="картинка" />
+                  ))}
+                </CarouselProducts>
+              </Container>
+            }
+          />
+          <Route path="/" element={<Container />} />
+          <Route path="/catalog" element={<Products />} />
+          <Route path="/catalog/:id" element={<Details />} />
+          <Route path="/filterMen" element={<FilterMen />} />
+          <Route path="/filterWoman" element={<FilterWoman />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

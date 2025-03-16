@@ -1,17 +1,9 @@
+import "./FilterMen.css";
 import { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  useParams,
-  Route,
-  Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import "./Products.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
-const Products = ({ children }) => {
+function FilterMen() {
   const [loading, setLoading] = useState(true);
   const [jewelry, setJewelry] = useState([]);
 
@@ -28,35 +20,25 @@ const Products = ({ children }) => {
       });
   }, []);
 
+  const gender = jewelry.filter((e) => e.gender === "Для мужчин");
   return (
-    <div>
-      {children}
-      <div className="catalog-head">
-        <Link className="catalog-head__link" to="/">
-          На главную
-        </Link>
-      </div>
-      <h3 className="catalog-h2">Каталог товаров</h3>
+    <>
       <div className="catalog-jewelry">
         {loading && <p>Товары загружаются</p>}
         {!loading &&
-          jewelry.map((product) => (
+          gender.map((product) => (
             <div key={product.id}>
-              <h2>{product.title}</h2>
               <div className="catalog-item_image">
                 <img className="imgJewelry" src={product?.image} alt="" />
               </div>
+              <h2>{product.title}</h2>
               <div>{product.price}</div>
-              <Link
-                className="catalog-product__link"
-                to={`/catalog/${product.id}`}
-              >
-                Подробнее
-              </Link>
+
+              <Link to={`/catalog/${product.id}`}>Подробнее</Link>
             </div>
           ))}
       </div>
-    </div>
+    </>
   );
-};
-export default Products;
+}
+export default FilterMen;

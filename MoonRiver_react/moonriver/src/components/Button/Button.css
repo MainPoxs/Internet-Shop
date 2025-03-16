@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+details > summary .lineStyle {
+  border-top: 2px solid black;
+}
+details > summary .lineCenter {
+  width: 30px;
+  border-top: 2px solid black;
+}
+
+details > summary .lineBottom {
+  width: 30px;
+  border-top: 2px solid black;
+}
+details > summary .btn {
+  margin-top: 10px;
+}
+details[open] > summary .btn {
+  margin-top: 30px;
+}
