@@ -2,45 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* body {
-  max-width: 1200px;
-  margin: 0 auto;
+body,
+html {
   width: 100%;
 }
-
-body {
-  background-color: #fff;
-  color: black;
-}
-
-header {
-  display: flex;
-  width: 1440px;
-  height: 113px;
-}
-
-.header_logo {
-  display: flex;
-  align-items: flex-end;
-  width: 878px;
-}
-
-details > summary .lineStyle,
-details[open] summary .lineStyle {
-  border-top: 2px solid white;
-  z-index: 150;
-}
-
-details > summary .lineCenter,
-details[open] summary .lineCenter {
-  width: 30px;
-  border-top: 2px solid white;
-  z-index: 150;
-}
-
-details > summary .lineBottom,
-details[open] summary .lineBottom {
-  width: 30px;
-  border-top: 2px solid white;
-  z-index: 150;
-} */

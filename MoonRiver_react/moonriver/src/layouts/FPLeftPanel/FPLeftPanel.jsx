@@ -1,12 +1,7 @@
 import "./FPLeftPanel.css";
 
 function FPLeftPanel({ children }) {
-  return (
-    <div className="leftPanel">
-      {children}
-      {/* <img className="ring" src="./image/ring.svg" /> */}
-    </div>
-  );
+  return <div className="leftPanel">{children}</div>;
 }
 
 export default FPLeftPanel;

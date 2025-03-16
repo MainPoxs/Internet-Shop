@@ -6,3 +6,24 @@
 .app-header {
   background-color: #272727;
 }
+.footer {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  margin-top: 16px;
+  background-color: #272727;
+}
+.footer-logo {
+  margin-left: 50px;
+}
+.footer a,
+.footer-info {
+  color: white;
+  margin-left: 20px;
+  margin-top: 200px;
+}
+.footer-info {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+}

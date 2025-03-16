@@ -2,7 +2,9 @@ details {
   display: flex;
   width: 100%;
 }
-
+details[open] {
+  background-color: #272727;
+}
 summary {
   display: flex;
   margin-left: 50px;
@@ -13,7 +15,7 @@ summary {
 details > summary .lineStyle,
 details[open] summary .lineStyle {
   border-top: 2px solid white;
-  z-index: 25;
+  z-index: 200;
   transition-duration: 2s;
 }
 
@@ -21,14 +23,14 @@ details > summary .lineCenter,
 details[open] summary .lineCenter {
   width: 30px;
   border-top: 2px solid white;
-  z-index: 25;
+  z-index: 200;
 }
 
 details > summary .lineBottom,
 details[open] summary .lineBottom {
   width: 30px;
   border-top: 2px solid white;
-  z-index: 25;
+  z-index: 200;
 }
 #menu {
   z-index: 120;
@@ -94,17 +96,6 @@ header {
   height: 53px;
 }
 
-/* details > summary,
-details[open] summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  padding-left: 100px;
-  cursor: pointer;
-  list-style: none;
-} */
 details[open] summary {
   margin: 0;
   padding: 0;
@@ -128,7 +119,7 @@ details[open] .navMenu {
   flex-direction: column;
   position: relative;
   z-index: 100;
-  height: 100%;
+  height: 850px;
   width: 100%;
   background-color: #272727;
   animation-name: menuAnimation;
@@ -163,15 +154,6 @@ details[open] .navlist {
   font-weight: 500;
   letter-spacing: 0.06em;
 }
-details[open] .navMenuArrow {
-  width: 31px;
-  height: 17px;
-  padding-left: 23px;
-}
-details[open] .navMenuArrow:hover {
-  padding-left: 30px;
-  transition-duration: 0.4s;
-}
 
 details[open] table {
   display: flex;
@@ -186,11 +168,13 @@ details[open] table a {
 }
 details[open] tbody {
   display: flex;
+  color: white;
 }
 details[open] tbody tr {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  color: white;
 }
 
 details[open] tbody tr,
@@ -198,6 +182,7 @@ details[open] tbody tr,
   font-family: FuturaPtBook;
   font-size: 18px;
   letter-spacing: 0.06em;
+  color: white;
 }
 
 details[open] #tr1 {
@@ -216,6 +201,7 @@ details[open] tr {
   text-align: left;
   padding-right: 100px;
   cursor: pointer;
+  color: white;
 }
 details[open] th {
   vertical-align: top;
@@ -237,6 +223,7 @@ details[open] li {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 details[open] hr:hover {
@@ -294,18 +281,9 @@ details[open] .navContacts {
   flex-direction: column;
   justify-content: space-around;
   margin-top: 70px;
+  color: #ffffff;
 }
-/* details[open] > .navMenu {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 20;
-  height: 100%;
-  width: 100%;
-  background-color: #272727;
-  animation-name: menuAnimationClose;
-  animation-duration: 3s;
-} */
+
 @keyframes menuAnimation {
   from {
     top: -1024px;
@@ -314,12 +292,3 @@ details[open] .navContacts {
     top: 0;
   }
 }
-
-/* @keyframes menuAnimationClose {
-  from {
-    top: 1024px;
-  }
-  to {
-    top: -1024;
-  }
-} */

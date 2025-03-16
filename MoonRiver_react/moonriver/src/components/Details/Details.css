@@ -1,7 +1,10 @@
-.detail-product {
+.detail-jewelry {
+  display: inline;
+  justify-content: space-between;
+}
+.detail-prod {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(1, 1, 29);
 }
 .detail-product__head {
   display: flex;
@@ -15,13 +18,14 @@
   letter-spacing: 1px;
   color: rgb(139, 139, 148);
 }
-/* .button-play {
+.button-card {
+  display: flex;
   background-color: rgb(233, 77, 5);
-  color: wheat;
+  color: black;
   width: 150px;
   height: 50px;
   border-radius: 50px;
 }
-.button-play:hover {
+.button-card:hover {
   background-color: rgb(139, 139, 148);
-} */
+}

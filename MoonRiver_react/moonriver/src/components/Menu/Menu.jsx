@@ -3,9 +3,9 @@ import "./Menu.css";
 function Menu() {
   return (
     <div className="navMenu ">
-      <div class="navMenuHeader "></div>
+      <div className="navMenuHeader "></div>
       <nav>
-        <ul class="navlist">
+        <ul className="navlist">
           <li>ЮВЕЛИРНЫЕ ИЗДЕЛИЯ</li>
           <li>ЧАСЫ</li>
           <li>АРОМАТЫ</li>
@@ -125,18 +125,18 @@ function Menu() {
           </tr>
         </tbody>
       </table>
-      <div class="navPhotoBlock">
-        <div class="navPhoto">
-          <div class="futuraBook18">
+      <div className="navPhotoBlock">
+        <div className="navPhoto">
+          <div className="futuraBook18">
             <a href="#" target="_blank">
               <img src="image/newPhoto.svg"></img>
             </a>
           </div>
         </div>
-        <div class="navContacts">
-          <div class="futuraBook14">ТЕЛЕФОН ГОРЯЧЕЙ ЛИНИИ</div>
-          <div class="futuraBook14 contactTopA ">+7 800 456 456</div>
-          <div class="futuraBook14">ПОДПИШИТЕСЬ НА НОВОСТИ</div>
+        <div className="navContacts">
+          <div className="futuraBook14">ТЕЛЕФОН ГОРЯЧЕЙ ЛИНИИ</div>
+          <div className="futuraBook14 contactTopA ">+7 800 456 456</div>
+          <div className="futuraBook14">ПОДПИШИТЕСЬ НА НОВОСТИ</div>
           <div></div>
         </div>
       </div>

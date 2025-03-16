@@ -27,23 +27,30 @@ function Details() {
   }, []);
 
   return (
-    <div>
+    <div className="detail-jewelry">
       <div className="catalog-head">
         <Link className="catalog-head__link" to="/">
           На главную
         </Link>
       </div>
-      {loading && <p>Товары загружаются</p>}
-      {!loading && (
-        <div className="detail-product">
-          <img className="imgJewelry" src={jewelry?.image} alt="" />
-          <h2 className="detail-product__head">{jewelry.title}</h2>
-          <div>{jewelry.price}</div>
-          <div>{jewelry.gender}</div>
-          <div className="detail-product__description">{jewelry.desc}</div>
-          <div>{jewelry.category}</div>
+      <div className="detail-jewelry">
+        {loading && <p>Товары загружаются</p>}
+        {!loading && (
+          <div className="detail-prod">
+            <img className="imgJewelry" src={jewelry?.image} alt="" />
+            <h2 className="detail-product__head">{jewelry.title}</h2>
+            <div>{jewelry.price}</div>
+            <div>{jewelry.gender}</div>
+            <div className="detail-product__description">{jewelry.desc}</div>
+            <div>{jewelry.category}</div>
+          </div>
+        )}
+        <div>
+          <Link to="/card">
+            <button className="button-card">В корзину</button>
+          </Link>
         </div>
-      )}
+      </div>
     </div>
   );
 }

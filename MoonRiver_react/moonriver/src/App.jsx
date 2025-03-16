@@ -18,6 +18,7 @@ import Products from "./components/Products/Products";
 import Details from "./components/Details/Details";
 import FilterMen from "./components/FilterMen/FilterMen";
 import FilterWoman from "./components/FilterWoman/FilterWoman";
+import Card from "./components/Card/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Container from "./components/Container/Container";
@@ -105,8 +106,21 @@ function App() {
           <Route path="/catalog/:id" element={<Details />} />
           <Route path="/filterMen" element={<FilterMen />} />
           <Route path="/filterWoman" element={<FilterWoman />} />
+          <Route path="/card" element={<Card />} />
         </Routes>
       </Router>
+      <div className="footer">
+        <div className="footer-logo">
+          <img src="logoNavMenu.svg" alt="" />
+        </div>
+        <a
+          target="blanck"
+          href="https://трудкрут.рф/doc/Politika_konfidentcialnosti_personalnykh_dannykh.docx"
+        >
+          политика конфиденциальности
+        </a>
+        <div className="footer-info">ТЕЛЕФОН ГОРЯЧЕЙ ЛИНИИ +7 800 456 456</div>
+      </div>
     </div>
   );
 }

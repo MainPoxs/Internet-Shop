@@ -23,6 +23,11 @@ function FilterMen() {
   const gender = jewelry.filter((e) => e.gender === "Для мужчин");
   return (
     <>
+      <div className="catalog-head">
+        <Link className="catalog-head__link" to="/">
+          На главную
+        </Link>
+      </div>
       <div className="catalog-jewelry">
         {loading && <p>Товары загружаются</p>}
         {!loading &&
