@@ -36,17 +36,22 @@ const Products = ({ children }) => {
           На главную
         </Link>
       </div>
-      <h3 className="catalog-h2">Каталог товаров</h3>
+      <h3 className="catalog-h3">Каталог товаров</h3>
       <div className="catalog-jewelry">
         {loading && <p>Товары загружаются</p>}
         {!loading &&
           jewelry.map((product) => (
             <div key={product.id}>
-              <h2>{product.title}</h2>
-              <div className="catalog-item_image">
-                <img className="imgJewelry" src={product?.image} alt="" />
-              </div>
-              <div>{product.price}</div>
+              <h2 className="catalog-h2">{product.title}</h2>
+              <Link
+                className="catalog-product__link"
+                to={`/catalog/${product.id}`}
+              >
+                <div className="catalog-item_image">
+                  <img className="imgJewelry" src={product?.image} alt="" />
+                </div>
+              </Link>
+              <div className="catalog-price">{product.price}</div>
               <Link
                 className="catalog-product__link"
                 to={`/catalog/${product.id}`}

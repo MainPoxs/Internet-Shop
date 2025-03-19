@@ -33,12 +33,22 @@ function FilterWoman() {
         {!loading &&
           gender.map((product) => (
             <div key={product.id}>
-              <div className="catalog-item_image">
-                <img className="imgJewelry" src={product?.image} alt="" />
-              </div>
-              <h2>{product.title}</h2>
-              <div>{product.price}</div>
-              <Link to={`/catalog/${product.id}`}>Подробнее</Link>
+              <h2 className="catalog-h2">{product.title}</h2>
+              <Link
+                className="catalog-product__link"
+                to={`/catalog/${product.id}`}
+              >
+                <div className="catalog-item_image">
+                  <img className="imgJewelry" src={product?.image} alt="" />
+                </div>
+              </Link>
+              <div className="catalog-price">{product.price}</div>
+              <Link
+                className="catalog-product__link"
+                to={`/catalog/${product.id}`}
+              >
+                Подробнее
+              </Link>
             </div>
           ))}
       </div>

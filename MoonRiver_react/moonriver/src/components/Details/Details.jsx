@@ -1,4 +1,4 @@
-import "./Details";
+import "./Details.css";
 import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -27,30 +27,29 @@ function Details() {
   }, []);
 
   return (
-    <div className="detail-jewelry">
+    <div>
       <div className="catalog-head">
         <Link className="catalog-head__link" to="/">
           На главную
         </Link>
       </div>
-      <div className="detail-jewelry">
-        {loading && <p>Товары загружаются</p>}
-        {!loading && (
-          <div className="detail-prod">
+      {loading && <p>Товары загружаются</p>}
+      {!loading && (
+        <div className="detail-jewelry">
+          <div className="detail-prod detail-style">
             <img className="imgJewelry" src={jewelry?.image} alt="" />
-            <h2 className="detail-product__head">{jewelry.title}</h2>
-            <div>{jewelry.price}</div>
-            <div>{jewelry.gender}</div>
-            <div className="detail-product__description">{jewelry.desc}</div>
-            <div>{jewelry.category}</div>
           </div>
-        )}
-        <div>
-          <Link to="/card">
-            <button className="button-card">В корзину</button>
-          </Link>
+          <div className="detail-text detail-style">
+            <h2 className="detail-product__head">{jewelry.title}</h2>
+            <div className="detail-product__des">{jewelry.gender}</div>
+            <div className="detail-product__des">{jewelry.desc}</div>
+            <div className="price">{jewelry.price}</div>
+            <Link className="detail-link" to="/card">
+              <button className="button-card">В корзину</button>
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
