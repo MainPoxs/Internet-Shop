@@ -1,10 +1,8 @@
-Internet-Shop. 
+Internet-Shop (JavaScript). 
 1. Дизайн.  
  - макет создан с помощью Figma.
 2. Фронтенд-разработка.
  - React.
-3. Бэкенд-разработка.
- - Node.js.
 
 Пример простого интернет-магазина.
 <img width="1897" height="937" alt="image" src="https://github.com/user-attachments/assets/804d4bd8-9af4-45a4-93c2-b4190d8741a2" />
